@@ -326,7 +326,7 @@ abstract class cf_names {
 /**
 * Custom field names current in system as an array.
 * Static call cf_names::names_array()
-* @return integer   0 on failure
+* @return array   0 on failure
 */       
 		public static function names_array() {
 
@@ -344,7 +344,7 @@ abstract class cf_names {
 /**
 * Custom field names current in system as a comma delimited list.
 * Static call cf_names::names_string()
-* @return integer   0 on failure
+* @return string   0 on failure
 */
 		public static function names_string(){
 		
@@ -362,7 +362,7 @@ abstract class cf_names {
 /**
 * Custom field columns current in system as a comma delimited list.
 * Static call cf_names::columns_string()
-* @return integer   0 on failure
+* @return string   0 on failure
 */
 		public static function columns_string(){
 		
@@ -380,7 +380,7 @@ abstract class cf_names {
 /**
 * Custom field name by column name.
 * Static call cf_names::column_to_name($c_name)
-* @return integer   0 on failure
+* @return string   0 on failure
 */
 		public static function column_to_name($c_name){
 		
