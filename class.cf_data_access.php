@@ -378,6 +378,24 @@ abstract class cf_names {
 		}
 
 /**
+* Custom field columns current in system as a comma delimited list.
+* Static call cf_names::columns_string()
+* @return string   0 on failure
+*/
+		public static function columns_array(){
+		
+		$result = array();
+			$where = "name rlike '_set' and name rlike 'custom_' and  val != '' ";
+				$rs = safe_rows('name', 'txp_prefs', $where);
+				
+				foreach($rs as $list) {
+					$result[] = rtrim($list['name'], '_set');
+				}
+						
+        return $result;        
+		}
+
+/**
 * Custom field name by column name.
 * Static call cf_names::column_to_name($c_name)
 * @return string   0 on failure
